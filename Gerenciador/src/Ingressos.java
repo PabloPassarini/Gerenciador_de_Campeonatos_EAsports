@@ -1,6 +1,9 @@
 
 public class Ingressos {
-	String apresentador;
-	String narrador1, narrador2;
+	float valor_inteira, valor_meia;
+	int quantidade_pista, quantidade_vip;
+	
+	
+	
 	
 }
