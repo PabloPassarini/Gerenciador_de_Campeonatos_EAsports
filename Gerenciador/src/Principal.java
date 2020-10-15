@@ -7,7 +7,7 @@ public class Principal {
 		for(int i=0; i<10; i++) {
 			v[i] = new Cadastro_Jogador();
 		}
-		v[0].nome = "Tomazz";
+		v[0].nome = "Tomazzz";
 		v[0].dados();
 	}
 
