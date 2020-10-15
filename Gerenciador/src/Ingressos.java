@@ -1,5 +1,6 @@
 
 public class Ingressos {
+<<<<<<< HEAD
 	float valor_inteira_vip, valor_inteira_pista, valor_meia_vip, valor_meia_pista;
 	int quantidade_pista, quantidade_vip;
 	String range_arquibancadas_vip, range_arquibancadas_pista; // exemplo: da poltrona 1 ate a 100 é vip
@@ -14,5 +15,9 @@ public class Ingressos {
 	}
 	
 	
+=======
+	String apresentador;
+	String narrador1, narrador2;
+>>>>>>> branch 'master' of https://github.com/PabloPassarini/Gerenciador_de_Campeonatos_EAsports.git
 	
 }
