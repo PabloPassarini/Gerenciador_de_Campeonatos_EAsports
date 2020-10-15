@@ -6,4 +6,14 @@ public class Campeonato {
 	float premio;
 	String local;
 	String narrador1, narrador2;
+	
+	String dados_Capeonato() {
+		String dados = "\n\nNome do Evento: " + this.nome_evento;
+		dados += "\nData inicial: " + this.data_inicial + " || Data final: " + this.data_final;
+		dados += "\nQuantidade de equipes: " + this.quantidade_equipes;
+		dados += "\nPremio R$" + this.premio;
+		dados += "\nLocal: " + this.local;
+		dados += "\nNarrador 1: " + this.narrador1 + " || Narrador 2: " + this.narrador2;
+		return dados;
+	}
 }
