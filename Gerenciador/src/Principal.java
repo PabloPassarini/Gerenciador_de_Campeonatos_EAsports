@@ -2,10 +2,13 @@
 public class Principal {
 
 	public static void main(String[] args) {
-		System.out.println("Teste");
-		System.out.println("teste");
-		System.out.println("Testeee");
-		System.out.println("Pablo");
+		
+		Cadastro_Jogador[] v = new Cadastro_Jogador[10];
+		for(int i=0; i<10; i++) {
+			v[i] = new Cadastro_Jogador();
+		}
+		v[0].nome = "Tomaz";
+		v[0].dados();
 	}
 
 }
