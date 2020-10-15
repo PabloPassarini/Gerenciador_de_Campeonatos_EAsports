@@ -7,7 +7,7 @@ public class Campeonato {
 	String local;
 	String narrador1, narrador2;
 	
-	String dados_Capeonato() {
+	String dados_Campeonato() {
 		String dados = "\n\nNome do Evento: " + this.nome_evento;
 		dados += "\nData inicial: " + this.data_inicial + " || Data final: " + this.data_final;
 		dados += "\nQuantidade de equipes: " + this.quantidade_equipes;
