@@ -1,6 +1,6 @@
 
 public class Ingressos {
-
+	String nome_evento;
 	float valor_inteira_vip, valor_inteira_pista, valor_meia_vip, valor_meia_pista;
 	int quantidade_pista, quantidade_vip;
 	String range_arquibancadas_vip, range_arquibancadas_pista; // exemplo: da poltrona 1 ate a 100 é vip
