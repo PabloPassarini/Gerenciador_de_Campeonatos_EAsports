@@ -1,9 +1,5 @@
 
 public class Ingressos {
-	float valor_inteira, valor_meia;
-	int quantidade_pista, quantidade_vip;
-
-
 	String nome_evento;
 	float valor_inteira_vip, valor_inteira_pista, valor_meia_vip, valor_meia_pista;
 	int quantidade_pista, quantidade_vip;
