@@ -23,7 +23,7 @@ public class Principal {
 			p[i] = new Patrocinio();
 		}
 		
-		
+		//deletar essa msg
 		int op = 0;
 		
 		while(op != 5) {
