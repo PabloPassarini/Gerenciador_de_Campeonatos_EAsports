@@ -40,6 +40,10 @@ public class Principal {
 					System.out.println("Informe a sua funçao dentro do jogo");
 					v[i].funcao = ler.next();
 					System.out.println(v[i].nome_jogador);
+					System.out.println(v[i].idade_jogador);
+					System.out.println(v[i].CPF_jogador);
+					System.out.println(v[i].morador);
+					System.out.println(v[i].funcao);
 				}
 				
 			}else if(op == 2) {
