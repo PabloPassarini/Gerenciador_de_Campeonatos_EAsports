@@ -4,7 +4,7 @@ public class Principal {
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);
 		
-		Cadastro_Jogador[] v= new Cadastro_Jogador[10];
+		Cadastro_Jogador[] v= new Cadastro_Jogador[10]; // 10 para teste, pra frente fazer uma lista encadeada
 		for(int i=0; i<10; i++) {
 			v[i] = new Cadastro_Jogador();
 		}
@@ -14,7 +14,10 @@ public class Principal {
 			ing[i] = new Ingressos();
 		}
 		
-		
+		Campeonato[] c = new Campeonato[10];
+		for(int i=0; i<10; i++) {
+			c[i] = new Campeonato();
+		}
 		
 		int op = 0;
 		
@@ -61,9 +64,35 @@ public class Principal {
 				}
 				
 				
+				
 			}
 			
-			
+			else if(op == 3) {
+				for(int i=0; i<10; i++) {
+					System.out.println("Nome do evento: ");
+					c[i].nome_evento = ler.next();
+					System.out.println("Data inicial do evento: ");
+					c[i].data_inicial = ler.next();
+					System.out.println("Data final do evento: ");
+					c[i].data_final = ler.next();
+					System.out.println("Quantidade de equipes: ");
+					c[i].quantidade_equipes = ler.nextInt();
+					System.out.println("Valor da premiacao: ");
+					c[i].premio = ler.nextFloat();
+					System.out.println("Local do evento: ");
+					c[i].local = ler.next();
+					System.out.println("Nome do 1o Narrador: ");
+					c[i].narrador1 = ler.next();
+					System.out.println("Nome do 2o Narrador: ");
+					c[i].narrador2 = ler.next();
+					
+					System.out.println("Deseja imprimir os dados? (1-sim, 2-nao)");
+					int aux = ler.nextInt();
+					if(aux == 1) {
+						System.out.println();
+					}
+				}
+			}
 			
 			
 			
