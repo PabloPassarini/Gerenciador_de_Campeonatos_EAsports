@@ -80,7 +80,7 @@ public class Principal {
 					c[i].data_inicial = ler.next();
 					System.out.println("Data final do evento: ");
 					c[i].data_final = ler.next();
-					System.out.println("Quantidade de equipes: ");
+					System.out.println("Quantida de de equipes: ");
 					c[i].quantidade_equipes = ler.nextInt();
 					System.out.println("Valor da premiacao: ");
 					c[i].premio = ler.nextFloat();
