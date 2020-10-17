@@ -18,6 +18,11 @@ public class Principal {
 		for(int i=0; i<10; i++) {
 			c[i] = new Campeonato();
 		}
+		Patrocinio[] p = new Patrocinio[10];
+		for(int i=0; i<10; i++) {
+			p[i] = new Patrocinio();
+		}
+		
 		
 		int op = 0;
 		
