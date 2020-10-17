@@ -18,6 +18,11 @@ public class Principal {
 		for(int i=0; i<10; i++) {
 			c[i] = new Campeonato();
 		}
+		Patrocinio[] p = new Patrocinio[10];
+		for(int i=0; i<10; i++) {
+			p[i] = new Patrocinio();
+		}
+		
 		
 		int op = 0;
 		
@@ -88,7 +93,7 @@ public class Principal {
 					c[i].data_inicial = ler.next();
 					System.out.println("Data final do evento: ");
 					c[i].data_final = ler.next();
-					System.out.println("Quantidade de equipes: ");
+					System.out.println("Quantida de de equipes: ");
 					c[i].quantidade_equipes = ler.nextInt();
 					System.out.println("Valor da premiacao: ");
 					c[i].premio = ler.nextFloat();
