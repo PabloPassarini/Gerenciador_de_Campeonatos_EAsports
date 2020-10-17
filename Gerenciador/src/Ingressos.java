@@ -3,11 +3,13 @@ public class Ingressos {
 	float valor_inteira, valor_meia;
 	int quantidade_pista, quantidade_vip;
 
+
+	String nome_evento;
 	float valor_inteira_vip, valor_inteira_pista, valor_meia_vip, valor_meia_pista;
 	int quantidade_pista, quantidade_vip;
 	String range_arquibancadas_vip, range_arquibancadas_pista; // exemplo: da poltrona 1 ate a 100 é vip
 	
-	String dados_ingressos() {
+	public String dados_ingressos() {
 		String dados = "\n\nQuantidade de ingressos vip: " + this.quantidade_vip + " || Quantidade de ingressos pista: " + this.quantidade_pista;
 		dados += "\nPreco inteira vip R$" +this.valor_inteira_vip + " || Preco meia vip R$" + this.valor_meia_vip;
 		dados += "\nPreco inteira pista R$" +this.valor_inteira_pista + "|| Preco meia pista R$" +this.valor_meia_pista;
@@ -17,5 +19,5 @@ public class Ingressos {
 	}
 	String apresentador;
 	String narrador1, narrador2;
-	
+
 }
