@@ -18,9 +18,9 @@ public class Principal {
 		for(int i=0; i<10; i++) {
 			c[i] = new Campeonato();
 		}
-		Patrocinio[] p = new Patrocinio[10];
+		patrocinio[] p = new patrocinio[10];
 		for(int i=0; i<10; i++) {
-			p[i] = new Patrocinio();
+			p[i] = new patrocinio();
 		}
 
 		int op = 0;
@@ -39,10 +39,10 @@ public class Principal {
 					v[i].idade_jogador =  ler.nextInt();
 					System.out.println("Informe o CPF do jogador: ");
 					v[i].CPF_jogador =  ler.next();
-					System.out.println("Informe a cidade onde vive o jogador: ");
+				/*	System.out.println("Informe a cidade onde vive o jogador: ");
 					v[i].morador =  ler.next();
 					System.out.println("Informe a sua funçao dentro do jogo");
-					v[i].funcao = ler.next();
+					v[i].funcao = ler.next();*/
 
 					int aux;
 					System.out.println("Deseja imprimir os dados? (1-sim, 2-nao): ");
@@ -119,16 +119,16 @@ public class Principal {
 			else if(op == 4) {
 				for(int i=0; i<10; i++) {
 					System.out.println("Empresa patrocinadora: ");
-					p[i].Empresa=ler.next();
+					p[i].Empresa_patrocinio=ler.next();
 					System.out.println("Valor contribuido: ");
-					p[i].valor=ler.nextDouble();
+					p[i].valor_patrocinio=ler.nextDouble();
 					System.out.println("Nivel de Patrocinio");
-					p[i].nivelpatrocinio=ler.nextInt();
+					p[i].nivel_patrocinio=ler.nextInt();
 
 					System.out.println("Deseja imprimir os dados? (1-sim, 2-nao)");
 					int aux = ler.nextInt();
 					if(aux == 1) {
-						System.out.println(p[i].dados_Patrocinio());
+						System.out.println(p[i].dados_patrocinio());
 					}
 				}
 
