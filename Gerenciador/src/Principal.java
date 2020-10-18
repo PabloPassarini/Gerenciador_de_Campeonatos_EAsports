@@ -3,17 +3,17 @@ public class Principal {
 
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);
-		
+
 		Cadastro_Jogador[] v= new Cadastro_Jogador[10]; // 10 para teste, pra frente fazer uma lista encadeada
 		for(int i=0; i<10; i++) {
 			v[i] = new Cadastro_Jogador();
 		}
-		
+
 		Ingressos ing[] = new Ingressos[10];
 		for(int i=0; i<10; i++) {
 			ing[i] = new Ingressos();
 		}
-		
+
 		Campeonato[] c = new Campeonato[10];
 		for(int i=0; i<10; i++) {
 			c[i] = new Campeonato();
@@ -22,16 +22,15 @@ public class Principal {
 		for(int i=0; i<10; i++) {
 			p[i] = new Patrocinio();
 		}
-		
-		//deletar essa msg
+
 		int op = 0;
-		
+
 		while(op != 5) {
 			System.out.println("------------Gerenciador de competições de EA sports------------");
 			System.out.println("Menu: \n1-Cadastrar Jogador\n2-Ingressos\n3-Campeonato\n4-Patrocinio\n5-Sair\nOpcao: ");
 			op = ler.nextInt();
 			System.out.println(op);
-			
+
 			if(op == 1) {
 				for(int i=0; i<10; i++) {
 					System.out.println("Informe o nome do jogador: ");
@@ -44,14 +43,17 @@ public class Principal {
 					v[i].morador =  ler.next();
 					System.out.println("Informe a sua funçao dentro do jogo");
 					v[i].funcao = ler.next();
-					System.out.println(v[i].nome_jogador);
-					System.out.println(v[i].idade_jogador);
-					System.out.println(v[i].CPF_jogador);
-					System.out.println(v[i].morador);
-					System.out.println(v[i].funcao);
+
+					int aux;
+					System.out.println("Deseja imprimir os dados? (1-sim, 2-nao): ");
+					aux = ler.nextInt();
+					if(aux == 1) {
+						System.out.println(v[i].dados_jogadores());
+					}
 				}
-				
-			}else if(op == 2) {
+
+			}
+			else if(op == 2) {
 				for(int i=0; i<10; i++) {
 					System.out.println("\n\nPreencha os dados referentes aos ingressos do " + (i+1) + "o evento: ");
 					System.out.println("Nome do evento (do qual sera vendido o ingressos): ");
@@ -72,7 +74,7 @@ public class Principal {
 					ing[i].range_arquibancadas_vip = ler.next();
 					System.out.println("Range das arquibancadas pista (exemplo: 0/100, 50/250)");
 					ing[i].range_arquibancadas_pista = ler.next();
-					
+
 					int aux;
 					System.out.println("Deseja imprimir os dados? (1-sim, 2-nao): ");
 					aux = ler.nextInt();
@@ -80,11 +82,11 @@ public class Principal {
 						System.out.println(ing[i].dados_ingressos());
 					}
 				}
-				
-				
-				
+
+
+
 			}
-			
+
 			else if(op == 3) {
 				for(int i=0; i<10; i++) {
 					System.out.println("Nome do evento: ");
@@ -103,7 +105,7 @@ public class Principal {
 					c[i].narrador1 = ler.next();
 					System.out.println("Nome do 2o Narrador: ");
 					c[i].narrador2 = ler.next();
-					
+
 					System.out.println("Deseja imprimir os dados? (1-sim, 2-nao)");
 					int aux = ler.nextInt();
 					if(aux == 1) {
@@ -111,21 +113,38 @@ public class Principal {
 					}
 				}
 			}
-			
-			
-			
-			
-			
+
+
+
+			else if(op == 3) {
+				for(int i=0; i<10; i++) {
+					System.out.println("Empresa patrocinadora: ");
+					p[i].Empresa=ler.next();
+					System.out.println("Valor contribuido: ");
+					p[i].valor=ler.nextDouble();
+					System.out.println("Nivel de Patrocinio");
+					p[i].nivelpatrocinio=ler.nextInt();
+
+					System.out.println("Deseja imprimir os dados? (1-sim, 2-nao)");
+					int aux = ler.nextInt();
+					if(aux == 1) {
+						System.out.println(p[i].dados_Patrocinio());
+					}
+				}
+
+
+
+
+			}
+
+
+
+
+
+
+
+
+
+
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
-}
