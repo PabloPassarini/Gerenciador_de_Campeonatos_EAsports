@@ -116,7 +116,7 @@ public class Principal {
 
 
 
-			else if(op == 3) {
+			else if(op == 4) {
 				for(int i=0; i<10; i++) {
 					System.out.println("Empresa patrocinadora: ");
 					p[i].Empresa=ler.next();
