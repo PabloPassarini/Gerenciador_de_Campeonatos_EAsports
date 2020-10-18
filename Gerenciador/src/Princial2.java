@@ -16,7 +16,7 @@ public class Princial2 {
 		Scanner ler = new Scanner(System.in);
 		int op = 0;
 		Lista_jogador.criaLista_jogaodr();
-
+          Lista_jogador list_jogador= new Lista_jogador();
 		while(op != 5) {
 			System.out.println("------------Gerenciador de competições de EA sports------------");
 			System.out.println("Menu: \n1-Cadastrar Jogador\n2-lista de jogadores\n3-procurar jogador \n4-remover\n5-Sair\nOpcao: ");
@@ -33,21 +33,21 @@ public class Princial2 {
 				c=ler.next();
 				System.out.println("equipe");
 				e=ler.next();
-				Lista_jogador.add_jogador(n,i,c,e);
+				list_jogador.add_jogador(n,i,c,e);
 			}
 			if(op==2)
-				Lista_jogador.print_jogador();
+				list_jogador.print_jogador();
 			if(op==3) {
 				String n;
 				System.out.println("nome");
 				n=ler.next();
-				Lista_jogador.search_jogador_nome(n);
+				System.out.println(list_jogador.search_jogador_nome(n));
 			}
 			if(op==4) {
 				String n;
 				System.out.println("nome");
 				n=ler.next();
-				Lista_jogador.remove_jogador_nome(n);
+				list_jogador.remove_jogador_nome(n);
 
 			}
 

@@ -15,8 +15,7 @@ public class Lista_jogador { // Esboço
 
 	public static void print_jogador(){ //imprime lista
 		for(Cadastro_Jogador n = prim_jogador; n != null; n = n.getProx_jogador()){
-			n.dados_jogadores();
-			System.out.println("\n");
+			System.out.println(n.dados_jogadores()+"\n");
 		}
 	}
 
@@ -27,19 +26,19 @@ public class Lista_jogador { // Esboço
 			return false;
 	}
 
-	public static Cadastro_Jogador search_jogador_nome(String n){//Procurar na lista pelo nome
+	public static String search_jogador_nome(String n){//Procurar na lista pelo nome
 		for(Cadastro_Jogador i = prim_jogador; i != null; i = i.getProx_jogador()){
 			if(i.getInfo_nome_jogador()==n){
-				return i;
+				return i.dados_jogadores();
 			}
 		}
 		return null; 
 	}
 
-	public static Cadastro_Jogador search_jogador_CPF(String n){//Procurar na lista pelo CPF
+	public static String search_jogador_CPF(String n){//Procurar na lista pelo CPF
 		for(Cadastro_Jogador i = prim_jogador; i != null; i = i.getProx_jogador()){
 			if(i.getInfo_CPF_jogador()==n){
-				return i;
+				return i.dados_jogadores();
 			}
 		}
 		return null; 
