@@ -2,30 +2,13 @@ import java.util.Scanner;
 public class Princial2 {
 
 	public static void main(String[] args) {
-<<<<<<< HEAD
-		/*Scanner ler = new Scanner(System.in);
 
-
-		int contador_ingressos = 0;
-
-
-
-=======
 		Scanner ler = new Scanner(System.in);
-		
-		
-		int cont_ing = 0;
-		
-		
-		
->>>>>>> branch 'master' of https://github.com/PabloPassarini/Gerenciador_de_Campeonatos_EAsports.git
-		Ingressos[] ing = new Ingressos[10];
+		int op = 0, cont_ing=0;
+		Ingressos ing[] = new Ingressos[10];
 		for(int i=0; i<10; i++) {
 			ing[i] = new Ingressos();
-<<<<<<< HEAD
-		}*/
-		Scanner ler = new Scanner(System.in);
-		int op = 0;
+		}
           Lista_jogador list_jogador= new Lista_jogador();
           Lista_jogador.criaLista_jogador();
 		while(op != 5) {
@@ -61,7 +44,6 @@ public class Princial2 {
 				list_jogador.remove_jogador_nome(n);
 		}
 		
-		int op = 0;
 		while(op != 6) {
 			System.out.println("------------Gerenciador de competições de EA sports 2------------");
 			System.out.println("Menu: \n1-Cadastrar Jogador\n2-Ingressos\n3-Campeonato\n4-Patrocinio\n5-Editar\n6-Sair\nOpcao: ");
@@ -111,8 +93,17 @@ public class Princial2 {
 			}
 		
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/PabloPassarini/Gerenciador_de_Campeonatos_EAsports.git
 			}
 
+<<<<<<< HEAD
 	}		
 
  }
+=======
+	}
+}
+>>>>>>> branch 'master' of https://github.com/PabloPassarini/Gerenciador_de_Campeonatos_EAsports.git
