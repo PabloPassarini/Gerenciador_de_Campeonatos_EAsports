@@ -11,4 +11,11 @@ public class Cadastro_Jogador {
 		dados+= "\nMorador da cidade; " +this.morador;
 		return dados;
 	}
+	public void add_jogador(int a){ // cadastrar jogador
+		for(int i=0;i!=a;i++) {
+			
+			}
+		}
+
+}
 }
