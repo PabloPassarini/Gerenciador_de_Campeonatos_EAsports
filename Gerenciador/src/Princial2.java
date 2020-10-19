@@ -59,7 +59,6 @@ public class Princial2 {
 				System.out.println("nome");
 				n=ler.next();
 				list_jogador.remove_jogador_nome(n);
-=======
 		}
 		
 		int op = 0;
@@ -112,14 +111,8 @@ public class Princial2 {
 			}
 		
 	}
->>>>>>> branch 'master' of https://github.com/PabloPassarini/Gerenciador_de_Campeonatos_EAsports.git
-
-<<<<<<< HEAD
 			}
 
 	}		
-}
-=======
+
  }
->>>>>>> branch 'master' of https://github.com/PabloPassarini/Gerenciador_de_Campeonatos_EAsports.git
-}
