@@ -1,8 +1,9 @@
 public class Lista_Patrocinio {
 
 
-	private patrocinio prim;
-	public void criaLista(){
+	private static patrocinio prim;
+	
+	public void criaLista_patrocinio(){
 		prim = null;
 	}
 
@@ -24,17 +25,15 @@ public class Lista_Patrocinio {
 	}
 
 
-	public patrocinio search_patrocinio(String i){
+	public  patrocinio search_patrocinio(String i){
 		for(patrocinio n = prim; n != null; n = n.getProx()){
 			if(n.getEmpresa_patrocinio()==i){
-				System.out.println("Nome: "+n.getEmpresa_patrocinio());
-				System.out.println("Contribuiçao: "+n.getvalor_patrocinio());
+				return n;
 			}
 		}
 		return null;
-	}
-
-
+	}    
+    
 	public void remove_patrocinio(String i){
 		patrocinio anterior = null;
 		patrocinio p = prim;
@@ -51,4 +50,8 @@ public class Lista_Patrocinio {
 			anterior.setProx(p.getProx());
 		}
 	}
-}
+
+
+
+		
+	}
