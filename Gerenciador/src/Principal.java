@@ -1,6 +1,6 @@
-import java.util.Scanner;
-public class Principal {
+import java.util.*;
 
+public class Principal {
 	public static void main(String[] args) {
 		int op = -1,op_edit, cont_ing = 0, qtd_ing =10, aux;
 		String aux_s;
@@ -98,3 +98,4 @@ public class Principal {
 		}
 	}
 }
+
