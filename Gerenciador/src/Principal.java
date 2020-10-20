@@ -4,7 +4,9 @@ public class Principal {
 	public static void main(String[] args) {
 		int op = -1,op_edit, cont_ing = 0, qtd_ing =10, aux;
 		String aux_s;
+		
 		Scanner ler = new Scanner(System.in);
+		
 		Lista_Campeonato camp = new Lista_Campeonato();
 		camp.InserirComeco(" ", " ", " ", 0); // Concertando erro
 		
@@ -14,16 +16,26 @@ public class Principal {
 			ing[i] = new Ingressos();
 		}
 		
+		Lista_equipe listaE = new Lista_equipe();
+		listaE.criaLista_equipe();
+		
+		Lista_Patrocinio listaP = new Lista_Patrocinio();
+	    listaP.criaLista_patrocinio();
+		
 		
 		
 		while(op != 0) {
 			System.out.println("*******************Menu*********************");
-			System.out.println("1-Adicionar Jogador, 2-Comprar Ingresso,3-Campeonato,4-Patrocinio, 5-Edita Campeonato , 6-Editar ingresso, 7-Imprimir Campeonatos");
+			System.out.println("1-Adicionar equipe, 2-Comprar Ingresso,3-Campeonato,4-Patrocinio, 5-Edita Campeonato , 6-Editar ingresso, 7-Imprimir Campeonatos");
 			op = ler.nextInt();
 			if(op == 1) {
-				
-				
-				
+				String nome;
+				System.out.println("Digite o nome da equipe: ");
+				nome = ler.next();
+				listaE.add_equipe(nome);
+				System.out.println("\nLista equipes: ");
+				listaE.print_equipe();
+				System.out.println("\n");
 				
 			}else if(op == 2) {
 				if(qtd_ing != 0) {
@@ -62,9 +74,17 @@ public class Principal {
 				
 			}else if(op == 4) {
 				
-			
-			
-			
+				String bb;
+                double aa;
+                System.out.println("Digite o nome da Empresa");
+                bb=ler.next();
+                System.out.println("Digite o valor contribuido pela empresa");
+                aa=ler.nextDouble();
+                listaP.add_patrocinio(aa,bb);
+                System.out.println("\nLista patrocinios: ");
+                listaP.print_patrocinio();
+                System.out.println("\n");
+                
 			
 			}else if(op == 5) {
 				System.out.println("Procurar campeonato, digite o nome do evento: ");
@@ -84,6 +104,7 @@ public class Principal {
 						break;
 					}
 				}
+				
 				
 				if(pos != -1) {
 				while(true){
