@@ -25,7 +25,7 @@ public class Lista_Patrocinio {
 	}
 
 
-	public  patrocinio search_patrocinio(String i){
+	public static  patrocinio search_patrocinio(String i){
 		for(patrocinio n = prim; n != null; n = n.getProx()){
 			if(n.getEmpresa_patrocinio()==i){
 				return n;

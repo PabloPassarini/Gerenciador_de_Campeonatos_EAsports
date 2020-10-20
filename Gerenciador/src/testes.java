@@ -73,7 +73,9 @@ public class testes {
 				String  aa;
 				System.out.println("Digite o nome da Empresa");
 				aa=ler.next();
-				System.out.println(lista.search_patrocinio(aa).getvalor_patrocinio());
+				patrocinio x=Lista_Patrocinio.search_patrocinio(aa);
+				System.out.println(x.getEmpresa_patrocinio());
+				System.out.println(x.getvalor_patrocinio());
 			}
 			if(aux==4)//nao funciona
 			{
