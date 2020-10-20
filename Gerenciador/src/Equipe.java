@@ -3,7 +3,6 @@ public class Equipe {
 	String nome_equipe;
 
 	String nome_jogador,CPF_jogador;
-	int idade_jogador;
 
 	//Scanner ler = new Scanner(System.in);
 
@@ -36,8 +35,6 @@ public class Equipe {
 	public void setCPF_jogador(String info) {
 		this.CPF_jogador = info;
 	}
-
-
 
 	public Equipe getProx() {
 		return prox;

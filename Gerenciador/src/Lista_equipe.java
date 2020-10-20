@@ -4,25 +4,31 @@ public class Lista_equipe {
 	private  Equipe prim;
 
 
+
 	public void criaLista_equipe(){
 		prim = null;
 	}
 
-	public void add(String ne,String nj,String c){
+
+
+	public void add_equipe(String ne){
 		Equipe novo = new Equipe();
 		novo.setnome_equipe(ne);
-
 		novo.setProx(prim);
 		prim = novo;
 	}
 
-	public void print(){
+
+
+	public void print_equipe(){
 		for(Equipe n = prim; n != null; n = n.getProx()){
 			System.out.println(n.getnome_equipe());
 		}
 	}
 
-	public Equipe search(String i){
+
+
+	public Equipe search_equipe(String i){
 		for(Equipe n = prim; n != null; n = n.getProx()){
 			if(n.getnome_equipe()==i){
 				return n;
@@ -31,7 +37,8 @@ public class Lista_equipe {
 		return null;
 	}
 
-	public void remove(String i){
+
+	public void remove_equipe(String i){
 		Equipe anterior = null;
 		Equipe p = prim;
 
