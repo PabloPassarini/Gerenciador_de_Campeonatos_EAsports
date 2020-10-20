@@ -5,6 +5,8 @@ public class Principal {
 		int op = -1,op_edit, cont_ing = 0, qtd_ing =10, aux;
 		String aux_s;
 		Scanner ler = new Scanner(System.in);
+		Lista_Campeonato camp = new Lista_Campeonato();
+		camp.InserirComeco(" ", " ", " ", 0); // Concertando erro
 		
 		//Vetor para a classe Ingressos
 		Ingressos[] ing = new Ingressos[10];
@@ -16,7 +18,7 @@ public class Principal {
 		
 		while(op != 0) {
 			System.out.println("*******************Menu*********************");
-			System.out.println("1-Adicionar Jogador, 2-Ingresso,3-Campeonato,4-Patrocinio, 5- , 6-Editar ingresso");
+			System.out.println("1-Adicionar Jogador, 2-Comprar Ingresso,3-Campeonato,4-Patrocinio, 5-Edita Campeonato , 6-Editar ingresso, 7-Imprimir Campeonatos");
 			op = ler.nextInt();
 			if(op == 1) {
 				
@@ -44,10 +46,31 @@ public class Principal {
 				}else {
 					System.out.println("Ingressos exgotados");
 				}		
+			}else if(op == 3) {
+				String a, b, c;
+				float d;
+				System.out.println("Digite o nome do evento: ");
+				a = ler.next();
+				System.out.println("Digite o narrador: ");
+				b = ler.next();
+				System.out.println("Digite o local: ");
+				c = ler.next();
+				System.out.println("Digite o valor do premio: ");
+				d = ler.nextFloat();
+				camp.InserirComeco(a, c, b, d);
+				camp.Imprimir();
+				
 			}else if(op == 4) {
 				
-				
+			
+			
+			
+			
 			}else if(op == 5) {
+				System.out.println("Procurar campeonato, digite o nome do evento: ");
+				String n = ler.next();	
+				camp.EditaCampeonato(n);
+				
 				
 				
 			}else if(op == 6) {
@@ -92,7 +115,7 @@ public class Principal {
 				}
 				
 			}else if(op == 7) {
-				
+				camp.Imprimir();
 				
 			}
 		}
