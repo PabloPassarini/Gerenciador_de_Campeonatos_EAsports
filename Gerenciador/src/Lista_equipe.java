@@ -15,6 +15,7 @@ public class Lista_equipe {
 		Equipe novo = new Equipe();
 		novo.setnome_equipe(ne);
 		novo.setProx(prim);
+		
 		prim = novo;
 	}
 

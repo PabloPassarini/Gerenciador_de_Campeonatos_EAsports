@@ -26,18 +26,45 @@ public class Principal {
 		
 		while(op != 0) {
 			System.out.println("*******************Menu*********************");
-			System.out.println("1-Adicionar equipe, 2-Comprar Ingresso,3-Campeonato,4-Patrocinio, 5-Edita Campeonato , 6-Editar ingresso, 7-Imprimir Campeonatos");
+			System.out.println("1-Guia Equipes, 2-Comprar Ingresso,3-Campeonato,4-Guia Patrocinio, 5-Edita Campeonato , 6-Editar ingresso, 7-Imprimir Campeonatos");
 			op = ler.nextInt();
 			if(op == 1) {
-				String nome;
-				System.out.println("Digite o nome da equipe: ");
-				nome = ler.next();
-				listaE.add_equipe(nome);
-				System.out.println("\nLista equipes: ");
-				listaE.print_equipe();
-				System.out.println("\n");
-				
-			}else if(op == 2) {
+				int op2=0;
+			        	while(op2!=5) {
+			            System.out.println("1->Adicionar Equipe; 2->Lista Equipe; 3->Procurar Equipe; 4->Remove equipe; 5->Retornar");
+			            op2=ler.nextInt();
+			            if(op2==1)
+			            {
+			                String bb;
+			                System.out.println("Digite o nome da equipe");
+			                bb=ler.next();
+			                listaE.add_equipe(bb);
+			                System.out.println("\n");
+			            }
+			            if(op2==2)
+			            {
+			                listaE.print_equipe();
+			                System.out.println("\n");
+			            }
+			            if(op2==3)
+			            {
+			                String aa;
+			                System.out.println("Digite o nome da equipe");
+			                aa=ler.next();
+			                listaE.search_equipe(aa);
+			                System.out.println("\n");
+			            }
+			            if(op2==4)
+			            {
+			                String bb;
+			                System.out.println("Digite o nome da equipe que deseje remover");
+			                bb=ler.next();
+			                listaE.remove_equipe(bb);
+			                System.out.println("\n");
+			            }
+			            //Ainda Trabalhando para incluir jogadores! rs
+			        }
+			} if(op == 2) {
 				if(qtd_ing != 0) {
 					int q1, q2;
 					System.out.println("Temos apenas " + qtd_ing + " ");
@@ -73,20 +100,47 @@ public class Principal {
 				camp.Imprimir();
 				
 			}else if(op == 4) {
-				
-				String bb;
-                double aa;
-                System.out.println("Digite o nome da Empresa");
-                bb=ler.next();
-                System.out.println("Digite o valor contribuido pela empresa");
-                aa=ler.nextDouble();
-                listaP.add_patrocinio(aa,bb);
-                System.out.println("\nLista patrocinios: ");
-                listaP.print_patrocinio();
-                System.out.println("\n");
-                
-			
-			}else if(op == 5) {
+				  int op2=0;
+			        while(op2!=5)
+			        {
+			            System.out.println("1->Adicionar Empresa; 2->Lista de Empresas; 3->Procurar Empresa; 4->Remove empresa; 5->Retornar");
+			            op2=ler.nextInt();
+			            if(op2==1)
+			            {
+			                String bb;
+			                double aa;
+			                System.out.println("Digite o nome da Empresa");
+			                bb=ler.next();
+			                System.out.println("Digite o valor contribuido pela empresa");
+			                aa=ler.nextDouble();
+			                listaP.add_patrocinio(aa,bb);
+			                System.out.println("\n");
+			            }
+			            if(op2==2)
+			            {
+			                listaP.print_patrocinio();
+			                System.out.println("\n");
+			            }
+			            if(op2==3)
+			            {
+			                String aa;
+			                System.out.println("Digite o nome da Empresa");
+			                aa=ler.next();
+			                listaP.search_patrocinio(aa);
+			                System.out.println("\n");
+			            }
+			            if(op2==4)
+			            {
+			                String bb;
+			                System.out.println("Digite o nome da empresa que deseje remover");
+			                bb=ler.next();
+			                listaP.remove_patrocinio(bb);
+			                System.out.println("\n");
+			            }
+			        }
+			    }
+                			
+			} if(op == 5) {
 				System.out.println("Procurar campeonato, digite o nome do evento: ");
 				String n = ler.next();	
 				camp.EditaCampeonato(n);
@@ -141,4 +195,4 @@ public class Principal {
 			}
 		}
 	}
-}
+
