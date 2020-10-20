@@ -5,6 +5,8 @@ public class Principal {
 		int op = -1,op_edit, cont_ing = 0, qtd_ing =10, aux;
 		String aux_s;
 		Scanner ler = new Scanner(System.in);
+		Campeonato c = new Campeonato();
+		
 		
 		//Vetor para a classe Ingressos
 		Ingressos[] ing = new Ingressos[10];
@@ -16,7 +18,7 @@ public class Principal {
 		
 		while(op != 0) {
 			System.out.println("*******************Menu*********************");
-			System.out.println("1-Adicionar Jogador, 2-Ingresso,3-Campeonato,4-Patrocinio, 5- , 6-Editar ingresso");
+			System.out.println("1-Adicionar Jogador, 2-Comprar Ingresso,3-Campeonato,4-Patrocinio, 5-Edita Campeonato , 6-Editar ingresso");
 			op = ler.nextInt();
 			if(op == 1) {
 				
@@ -44,10 +46,29 @@ public class Principal {
 				}else {
 					System.out.println("Ingressos exgotados");
 				}		
+			}else if(op == 3) {
+				String a, b, c1;
+				float d;
+				System.out.println("Digite o nome do evento: ");
+				a = ler.next();
+				System.out.println("Digite o narrador: ");
+				b = ler.next();
+				System.out.println("Digite o local: ");
+				c1 = ler.next();
+				System.out.println("Digite o valor do premio: ");
+				d = ler.nextFloat();
+				
+				
 			}else if(op == 4) {
 				
-				
+			
+			
+			
+			
 			}else if(op == 5) {
+				System.out.println("Procurar campeonato, digite o nome do evento: ");
+				String n = ler.next();	
+				
 				
 				
 			}else if(op == 6) {
