@@ -6,19 +6,20 @@ public class Principal {
 		String aux_s;
 		Scanner ler = new Scanner(System.in);
 		
-		
-		
-		
 		//Vetor para a classe Ingressos
 		Ingressos[] ing = new Ingressos[10];
 		for(int i=0; i<10; i++) {
 			ing[i] = new Ingressos();
 		}
+		
+		
+		
 		while(op != 0) {
 			System.out.println("*******************Menu*********************");
 			System.out.println("1-Adicionar Jogador, 2-Ingresso,3-Campeonato,4-Patrocinio, 5- , 6-Editar ingresso");
 			op = ler.nextInt();
 			if(op == 1) {
+				
 				
 				
 				
@@ -95,9 +96,5 @@ public class Principal {
 				
 			}
 		}
-		
-		
-		
-		
 	}
 }
