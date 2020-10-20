@@ -11,8 +11,6 @@ public class Lista_equipe {
 	public void add(String ne,String nj,String c){
 		Equipe novo = new Equipe();
 		novo.setnome_equipe(ne);
-		novo.setnome_jogador(nj);
-		novo.setCPF_jogador(c);
 
 		novo.setProx(prim);
 		prim = novo;
@@ -20,7 +18,7 @@ public class Lista_equipe {
 
 	public void print(){
 		for(Equipe n = prim; n != null; n = n.getProx()){
-			System.out.println(n.dados_jogadores());
+			System.out.println(n.getnome_equipe());
 		}
 	}
 

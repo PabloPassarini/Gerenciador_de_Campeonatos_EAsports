@@ -15,6 +15,7 @@ public class Equipe {
 
 	private Equipe prox;
 
+
 	public String getnome_equipe() {
 		return nome_equipe;
 	}
